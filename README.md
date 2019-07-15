@@ -7,7 +7,7 @@ Plugin provides `condaenv_prompt_info` function which returns the current conda 
 
 First clone the repo into your ZSH custom plugins directory using:
 ```
-git clone "https://github.com/saravanabalagi/zsh-condaenv" "$ZSH/custom/plugins/condaenv"
+git clone "https://github.com/saravanabalagi/condaenv" "$ZSH/custom/plugins/condaenv"
 ```
 
 Then add it to your `plugins` in `.zshrc` file
