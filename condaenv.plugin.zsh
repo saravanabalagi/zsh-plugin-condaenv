@@ -1,0 +1,3 @@
+function condaenv_prompt_info {
+ [ $CONDA_DEFAULT_ENV != "base" ] && echo $ZSH_THEME_CONDAENV_PROMPT_PREFIX$CONDA_DEFAULT_ENV$ZSH_THEME_CONDAENV_PROMPT_SUFFIX
+}
