@@ -22,10 +22,10 @@ Then launch a new terminal or source `.zshrc` in your current terminal to get th
 
 ### General
 
-You can retrieve the conda env name by calling
+You can retrieve the conda env name by calling `condaenv_prompt_info` function. For use inside zsh, 
 
 ```
-condaenv_prompt_info
+$(condaenv_prompt_info)
 ```
 It returns the conda environment name if you are in one, and an empty string if you are not in any conda env, or in the `base` env. 
 
@@ -39,3 +39,7 @@ PROMPT=$(condaenv_prompt_info)"$base_prompt"
 ZSH_THEME_CONDAENV_PROMPT_PREFIX="%{$fg[blue]%}[ "
 ZSH_THEME_CONDAENV_PROMPT_SUFFIX="] %{$reset_color%}"
 ```
+
+## License
+
+Please refer to the [License](LICENSE) file.
