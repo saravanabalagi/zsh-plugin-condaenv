@@ -1,7 +1,7 @@
 # zsh-condaenv
 Plugin provides `condaenv_prompt_info` function which returns the current conda environment name.
 
-
+![Screenshot](screenshot.png)
 
 ## Installation
 
