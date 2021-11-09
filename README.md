@@ -1,43 +1,41 @@
 # zsh-condaenv
+
 Plugin provides `condaenv_prompt_info` function which returns the current conda environment name.
 
 ![Screenshot](screenshot.png)
 
 ## Installation
 
-First clone the repo into your ZSH custom plugins directory using:
-```
-git clone "https://github.com/saravanabalagi/condaenv" "$ZSH/custom/plugins/condaenv"
-```
+1. Download the plugin
 
-Then add it to your `plugins` in `.zshrc` file
+   ```
+   git clone https://github.com/saravanabalagi/condaenv $ZSH_CUSTOM/plugins/condaenv
+   ```
 
-```
-plugins=(my_plugins my_other_plugins condaenv)
-```
+1. Add to `plugins` in `.zshrc` file
 
-Then launch a new terminal or source `.zshrc` in your current terminal to get the function working
+   ```
+   plugins=(my_plugins my_other_plugins condaenv)
+   ```
+
+Then launch a new terminal or source `.zshrc` in your current terminal.
 
 ## Usage
 
-### General
+This plugin exposes:
 
-You can retrieve the conda env name by calling `condaenv_prompt_info` function. For use inside zsh, 
+- `condaenv_prompt_info` function based on two env vars
+    1. `ZSH_THEME_CONDAENV_PREFIX` default `(`
+    1. `ZSH_THEME_CONDAENV_SUFFIX` default `)`
 
-```
-$(condaenv_prompt_info)
-```
-It returns the conda environment name if you are in one, and an empty string if you are not in any conda env, or in the `base` env. 
+Using this you can build a theme as below:
 
-### Themes
-You can use these variables in your theme changing color and other customizations. For example, to display conda env in blue, you can do something like:
-
-```
+```zsh
 base_prompt=PROMPT
 PROMPT=$(condaenv_prompt_info)"$base_prompt"
 
-ZSH_THEME_CONDAENV_PROMPT_PREFIX="%{$fg[blue]%}[ "
-ZSH_THEME_CONDAENV_PROMPT_SUFFIX="] %{$reset_color%}"
+ZSH_THEME_CONDAENV_PREFIX="%{$fg[blue]%}("
+ZSH_THEME_CONDAENV_SUFFIX=")%{$reset_color%}"
 ```
 
 ## License
