@@ -8,15 +8,18 @@ Plugin provides `condaenv_prompt_info` function which returns the current conda 
 
 1. Download the plugin
 
-   ```
-   git clone https://github.com/saravanabalagi/condaenv $ZSH_CUSTOM/plugins/condaenv
-   ```
+	```
+	git clone https://github.com/saravanabalagi/zsh-plugin-condaenv $ZSH_CUSTOM/plugins/condaenv
+	```
 
 1. Add to `plugins` in `.zshrc` file
 
-   ```
-   plugins=(my_plugins my_other_plugins condaenv)
-   ```
+	```
+	plugins=(
+		...
+		condaenv
+	)
+	```
 
 Then launch a new terminal or source `.zshrc` in your current terminal.
 
@@ -25,8 +28,8 @@ Then launch a new terminal or source `.zshrc` in your current terminal.
 This plugin exposes:
 
 - `condaenv_prompt_info` function based on two env vars
-    1. `ZSH_THEME_CONDAENV_PREFIX` default `(`
-    1. `ZSH_THEME_CONDAENV_SUFFIX` default `)`
+	1. `ZSH_THEME_CONDAENV_PREFIX` default `(`
+	1. `ZSH_THEME_CONDAENV_SUFFIX` default `)`
 
 Using this you can build a theme as below:
 
